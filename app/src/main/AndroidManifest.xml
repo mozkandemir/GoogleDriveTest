@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mod.googledrivetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="GDrive"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <!--android:configChanges="orientation|screenSize|keyboardHidden"-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.mod.googledrivetest.AppProvider"
+            android:authorities="com.mod.googledrivetest.provider"
+            android:exported="false"/>
+    </application>
+
+</manifest>
